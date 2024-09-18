@@ -32,7 +32,8 @@ class ShortLinksPlugin extends Singleton {
         add_filter( 'manage_edit-short_links_sortable_columns', [ $this, 'make_custom_columns_sortable' ] );
 
         add_action( 'template_redirect', [ $this, 'redirect_post_to_short_link' ] );       
-      
+        
+        add_action('plugins_loaded', [ $this, 'add_textdomain_for_plugin' ] );
     
     }
    
@@ -248,6 +249,18 @@ class ShortLinksPlugin extends Singleton {
             }
         }
     }
+
+    //add texdomain for plugin
+    public function add_textdomain_for_plugin() {
+        load_plugin_textdomain(
+            'shortlink',
+            false, // Каталог
+            dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+        );
+    }
+
+
+
 
 }
 
