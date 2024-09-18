@@ -1,0 +1,15 @@
+{
+    "name": "wp-plugin/shortlink-plugin",
+    "description": "Short Links",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "Patterns\\": "src/patterns",
+            "App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "phpcompatibility/php-compatibility": "^9.3"
+    }
+}
