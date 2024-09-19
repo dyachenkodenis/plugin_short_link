@@ -1,10 +1,9 @@
 <?php
 /*
 Plugin Name: Short Links Plugin
-Description: Плагин для создания коротких ссылок 
+Description: Plugin for create short links
 Version: 1.0
 Author: Denis
-Text Domain: shortlink
 */
 
 
