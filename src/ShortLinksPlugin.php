@@ -4,6 +4,7 @@ Plugin Name: Short Links Plugin
 Description: Plugin for create shorts link
 Version: 1.0
 Author: Denis
+Text Domain: shortlink
 */
 
 namespace App;
@@ -94,29 +95,30 @@ class ShortLinksPlugin extends Singleton {
 
         $go_time_link = get_post_meta( $post->ID, '_unique_click_count', true );    
 
-        $label = __('Оригинальная ссылка');
+        $label = __('Original link', 'shortlink');
         $input_id = 'original_link';
         $input_name = 'original_link';
         $input_value = esc_attr( $original_link );
-        $input_size = 150;
+        $input_size = 'width:100%';
 
         echo <<<METABOX
             <label for="$input_id">$label:</label>        
             METABOX;
 
         echo sprintf(
-            '<input type="url" id="%s" name="%s" value="%s" size="%d" />',
+            '<input type="url" id="%s" name="%s" value="%s" style="%s" />',
             $input_id,
             $input_name,
             $input_value,
             $input_size
         );
         //Total number of transitions - Общее количество переходов
-        $all_value = __('Total number of transitions');
+        $all_value = __('Total number of transitions', 'shortlink');
         //Number of transitions without unnecessary clicks - Количество переходов без лишних кликов
-        $filter_value = __('Number of transitions without unnecessary clicks');
-
+        $filter_value = __('Number of transitions without unnecessary clicks', 'shortlink');
+        
         echo <<<METAGOTOLINK
+            <br />
             <span>$all_value:  $go_to_link</span>        
             <br />
             <span>$filter_value:  $go_time_link</span>   
@@ -170,7 +172,7 @@ class ShortLinksPlugin extends Singleton {
                 if ( $original_link ) {
                     echo '<a href="' . esc_url( $original_link ) . '">' . esc_html( $original_link ) . '</a>';
                 } else {
-                    echo __('No original link');
+                    echo __('No original link', 'shortlink');
                 }
                 break;
 
@@ -251,12 +253,11 @@ class ShortLinksPlugin extends Singleton {
     }
 
     //add texdomain for plugin
-    public function add_textdomain_for_plugin() {
-        load_plugin_textdomain(
-            'shortlink',
-            false, // Каталог
-            dirname( plugin_basename( __FILE__ ) ) . '/languages/'
-        );
+    public function add_textdomain_for_plugin() {    
+       
+        $mo_file_path = __DIR__ . '/languages/plugin-shortlink-'. determine_locale() . '.mo';
+
+        load_textdomain( 'shortlink', $mo_file_path );        
     }
 
 
