@@ -1,0 +1,46 @@
+# Copyright (C) 2024 ...
+# This file is distributed under the same license as the Short Links Plugin plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Short Links Plugin 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shortlink\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-18T16:54:52+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: shortlink\n"
+
+#. Plugin Name of the plugin
+#: shortlinks-plugin.php
+msgid "Short Links Plugin"
+msgstr ""
+
+#. Description of the plugin
+#: shortlinks-plugin.php
+msgid "Plugin for create short link"
+msgstr ""
+
+#. Author of the plugin
+#: shortlinks-plugin.php
+msgid "..."
+msgstr ""
+
+#: src/ShortLinksPlugin.php
+msgid "Original link"
+msgstr ""
+
+#: src/ShortLinksPlugin.php
+msgid "Total number of transitions"
+msgstr ""
+
+#: src/ShortLinksPlugin.php
+msgid "Number of transitions without unnecessary clicks"
+msgstr ""
+
+#: src/ShortLinksPlugin.php
+msgid "No original link"
+msgstr ""

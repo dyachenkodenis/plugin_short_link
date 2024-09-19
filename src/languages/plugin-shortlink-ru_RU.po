@@ -1,0 +1,49 @@
+# Copyright (C) 2024 ...
+# This file is distributed under the same license as the Short Links Plugin plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Short Links Plugin 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shortlink\n"
+"Last-Translator: pc <denisdyachenko.90@gmail.com>\n"
+"Language-Team: Russian <gnu@d07.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-09-18T16:54:52+00:00\n"
+"PO-Revision-Date: 2024-09-19 05:30+0500\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: shortlink\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. Plugin Name of the plugin
+#: shortlinks-plugin.php
+msgid "Short Links Plugin"
+msgstr ""
+
+#. Description of the plugin
+#: shortlinks-plugin.php
+msgid "Plugin for create short link"
+msgstr ""
+
+#. Author of the plugin
+#: shortlinks-plugin.php
+msgid "..."
+msgstr ""
+
+#: src/ShortLinksPlugin.php
+msgid "Original link"
+msgstr "Оригинальная ссылка"
+
+#: src/ShortLinksPlugin.php
+msgid "Total number of transitions"
+msgstr "Общее количество переходов"
+
+#: src/ShortLinksPlugin.php
+msgid "Number of transitions without unnecessary clicks"
+msgstr "Количество переходов без лишних кликов"
+
+#: src/ShortLinksPlugin.php
+msgid "No original link"
+msgstr "Нет оригинальной ссылки"
